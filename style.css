@@ -1,0 +1,538 @@
+body {
+  background-color: #f8f8ff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6em;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*JQuery用*/
+.blur {
+  filter: blur(7px);
+}
+
+.delete {
+  display: none;
+}
+
+.main-nav {
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: -220px;
+  height: 100%;
+}
+
+/*メニューバー*/
+.button_container {
+  position: fixed;
+  top: 3%;
+  right: 4%;
+  height: 38px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 200;
+  transition: opacity 0.25s ease;
+}
+
+.button_container:hover {
+  opacity: 0.4;
+}
+
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+}
+
+.button_container.active .middle {
+  opacity: 0;
+}
+
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+}
+
+.button_container span {
+  background-color: #808080;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+}
+
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.overlay.open {
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
+}
+
+.overlay.open li {
+  animation: fadeInRight 0.3s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 50%;
+}
+
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+  width: 100%;
+}
+
+.overlay ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 2px;
+  background: #696969;
+  transition: 0.2s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+/*メインビジュアル*/
+.my_introduction {
+  font-family: 'Bebas Neue';
+  margin: 0 auto;
+  background-image: url(image/myintroduction.jpg);
+  background-size: cover;
+  padding: 300px 0 300px 0;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.myname {
+  letter-spacing: 1px;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.worker_type {
+  margin: 10px 0 10px 0;
+  font-size: 16px;
+}
+
+/* メインコンテンツ全体 */
+.sub_title h1 {
+  position: relative;
+  margin: 0;
+}
+
+.sub_title h1::before {
+  content: attr(data-en);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e4e4e4;
+  font-size: 48px;
+  z-index: -1;
+}
+
+/* About Me */
+.greetings {
+  margin: 0 auto;
+  padding: 30px 0 60px 0;
+  background-color: #f8f8ff;
+}
+
+.introduction_text {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: left;
+}
+
+.profile_image img {
+  width: 250px;
+  border-radius: 50%;
+  margin: 30px auto 10px;
+}
+
+/* 経歴 */
+.background {
+  background-color: #d8d8d8;
+  padding: 5px 0 60px 0;
+}
+
+.background table {
+  margin: 0 auto;
+}
+
+.background td {
+  padding: 10px 0;
+}
+
+.background .year {
+  min-width: 120px;
+}
+
+.background .event {
+  max-width: 420px;
+}
+
+/* 強み */
+.strength_section {
+  background-color: #f8f8ff;
+  padding-bottom: 20px;
+}
+
+.strength {
+  position: relative;
+  padding: 5px 0;
+  font-size: 24px;
+}
+
+.strength::before {
+  content: attr(data-en);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  color: #e4e4e4;
+  font-size: 32px;
+  z-index: -1;
+}
+
+.strength::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #757575;
+}
+
+.strength_section p {
+  margin: 15px 0 50px;
+}
+
+/* スキル紹介 */
+.skill_section {
+  margin: 0 auto;
+  padding: 10px 0 20px;
+  background-color: #D8D8D8;
+}
+
+.skill_section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  width: 300px;
+  padding: 0 50px;
+  margin: 10px;
+}
+
+.skill img {
+  width: 200px;
+}
+
+.skill img:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.5s;
+}
+
+.skill h2 {
+  position: relative;
+  padding: 5px 0;
+  margin: 10px auto;
+  font-size: 24px;
+}
+
+.skill h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #757575;
+}
+
+.skill p:first-of-type {
+  margin: 20px 0 10px;
+}
+
+/* サービス紹介 */
+.service_section {
+  margin: 0 auto;
+  padding: 30px 0 60px 0;
+  background-color: #f8f8ff;
+}
+
+.service_section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.service_item {
+  width: 300px;
+  padding: 0 50px;
+  margin: 10px;
+}
+
+.service_item img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.service_item img:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.5s;
+}
+
+.service_item h2 {
+  position: relative;
+  padding: 5px 0;
+  margin: 10px auto;
+  font-size: 24px;
+}
+
+.service_item h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #757575;
+}
+
+.service_item p {
+  margin: 20px 0 10px;
+}
+
+/*実績*/
+.portfolio_section {
+  margin: 0 auto;
+  padding: 30px 0 60px 0;
+  background-color: #D8D8D8;
+}
+
+.portfolio_title {
+  font-size: 48px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.portfolio_title p {
+  display: inline-block;
+}
+
+.portfolio_section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio_section li {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: calc(300px/16*9);
+  margin: 10px;
+}
+
+.portfolio img {
+  width: 300px;
+  height: calc(300px/16*9);
+  object-fit: cover;
+  border: 0.1px solid #b5b5b5;
+  transform: scale(1);
+  transition: .3s ease-in-out;
+}
+
+.hover_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.65);
+  /*透明にして表示させない*/
+  opacity: 0;
+  /*ホバーの動き方*/
+  transform: scale(1);
+  transition: .3s ease-in-out;
+}
+
+.hover_text .text1 {
+  font-size: 24px;
+  padding: 0 20px 10px;
+}
+
+.hover_text .text2 {
+  padding: 0 20px;
+}
+
+.portfolio_section li:hover .hover_text {
+  /*不透明にして表示*/
+  opacity: 1;
+  /*padding-topで上からスライド*/
+  padding-top: 10px;
+}
+
+.portfolio_section li:hover .portfolio img {
+  transform: scale(1.1);
+}
+
+/*フッター*/
+footer {
+  padding: 30px 0 10px;
+  background-color: #f8f8ff;
+}
+
+.contact_text {
+  margin-bottom: 15px;
+}
+
+/*SNSアイコン*/
+.follow-me {
+  list-style: none;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.follow-me li {
+  display: inline-block;
+  margin: 0 15px 80px 0;
+  padding: 0;
+}
+
+.follow-me li a::before {
+  background-color: #f8f8ff;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 35px;
+  height: 60px;
+  /* Button height */
+  width: 60px;
+  /* Button width */
+  line-height: 60px;
+  /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+}
+
+.follow-me li a:hover::before {
+  color: #fff;
+}
+
+.follow-me li .twitter::before {
+  content: "\f099";
+}
+
+.follow-me li .gmail::before {
+  content: "\f0e0";
+}
+
+.follow-me li .twitter:hover::before {
+  background-color: #55acee;
+}
+
+.follow-me li .gmail:hover::before {
+  background-color: #FF773E;
+}

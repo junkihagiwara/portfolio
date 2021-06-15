@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="このページのコンテント" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Junki Hagiwara's Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!--ヘッダー-->
+    <header>
+      <!--メニューバー-->
+      <div class="button_container" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <nav class="overlay-menu">
+          <ul>
+            <li><a href="#" class="menu_aboutme">About Me</a></li>
+            <li><a href="#" class="menu_service">Service</a></li>
+            <li><a href="#" class="menu_works">Works</a></li>
+            <li><a href="#" class="menu_contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--メインビジュアル-->
+    <div class="my_introduction">
+      <h1 class="myname">Junki Hagiwara's Portfolio</h1>
+      <h2 class="worker_type">- Web Designer -</h2>
+    </div>
+
+    <div class="main_content">
+      <!-- About Me -->
+      <div class="greetings">
+        <div class="portfolio_title">
+          <span
+            class="glyphicon glyphicon-user"
+            style="letter-spacing: 5px"
+          ></span>
+          <p>About Me</p>
+        </div>
+        <div class="profile_image animated fadein">
+          <img src="image/junkih.jpeg" alt="myprofile" />
+        </div>
+
+        <div class="introduction_text animated fadein">
+          <p>
+            ポートフォリオサイトをご覧いただきありがとうございます。Webデザイナーの萩原
+            隼樹(はぎわら
+            じゅんき)です。Web製作を通じて地域のお客様の想いを届けるお手伝いをしております。「お客様の期待を超え感動していただく」を信条に責任を持って仕事に取り組みます。
+          </p>
+        </div>
+      </div>
+
+      <!-- 経歴 -->
+      <div class="background">
+        <div class="sub_title animated fadein">
+          <h1 data-en="Background">経歴</h1>
+        </div>
+
+        <div class="introduction_text animated fadein">
+          <table>
+            <tr>
+              <td class="year">1987年</td>
+              <td class="event">北海道江別市の農家にて出生</td>
+            </tr>
+            <tr>
+              <td class="year">2005年</td>
+              <td class="event">北海道札幌東高等学校卒業</td>
+            </tr>
+            <tr>
+              <td class="year">2010年</td>
+              <td class="event">
+                米国テキサス大学経営学部ファイナンス学科卒業<br />(成績優秀者奨学金獲得)
+              </td>
+            </tr>
+            <tr>
+              <td class="year">2011年〜</td>
+              <td class="event">
+                日系大手外食会社にて食材受発注データ管理改善に従事
+              </td>
+            </tr>
+            <tr>
+              <td class="year">2014年〜</td>
+              <td class="event">
+                日系大手ITコンサルティング会社にて消費財メーカー向け業務システム導入支援に従事
+              </td>
+            </tr>
+            <tr>
+              <td class="year">2016年〜</td>
+              <td class="event">
+                外資系大手eコマース会社にて商品在庫管理改善に従事
+              </td>
+            </tr>
+            <tr>
+              <td class="year">2018年〜</td>
+              <td class="event">
+                北海道に戻り実家農業に従事<br />
+                出荷先直売所にてECサイト立上げを担当
+              </td>
+            </tr>
+            <tr>
+              <td class="year">現在</td>
+              <td class="event">
+                屋号を「ビバスゲート」とし、北海道を拠点にWebデザイナーとして活動中
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="strength_section">
+        <div class="sub_title animated fadein">
+          <h1 data-en="Strengths">強み</h1>
+        </div>
+
+        <div class="introduction_text animated fadein">
+          <h2 class="strength" data-en="Proactivity">自発的な提案</h2>
+          <p>
+            お客様が作りたいサイトとその先に求める成果をヒアリングし、目的に見合うものを作成するために自ら改善点を提案できるよう積極的に相談いたします。日々、新技術習得と情報収集をつづけております。(現在Google
+            UX Design Courseを受講中)
+          </p>
+
+          <h2 class="strength" data-en="Speed">即返答、即対応</h2>
+          <p>
+            「お客様の期待を超え感動していただく」を信条に、質だけでなくスピードも重視しサービスを提供しております。メール等の返信は3時間以内に返信し、軽微な修正は24時間以内に対応いたいします。(稼働時間は10:00〜20:00)
+          </p>
+
+          <h2 class="strength" data-en="Follow-up">アフターフォロー</h2>
+          <p>
+            最後まで責任を持って仕事に取り組むため、初期不良対応や使い方サポート、そしてプラグインを含めた定期的なアップデート対応を納品後1ヶ月間無料で行います。
+          </p>
+        </div>
+      </div>
+
+      <!-- スキル紹介 -->
+      <div class="skill_section">
+        <div class="sub_title animated fadein">
+          <h1 data-en="Skillset">スキル</h1>
+        </div>
+
+        <div class="introduction_text animated fadein">
+          <ul>
+            <li class="skill">
+              <img src="./image/html.png" alt="HTML" />
+              <h2>HTML</h2>
+              <p>Level: ★★★★★</p>
+              <p>全体の構成を考慮し計画的にマークアップいたします。</p>
+            </li>
+
+            <li class="skill">
+              <img src="./image/css.png" alt="CSS" />
+              <h2>CSS</h2>
+              <p>Level: ★★★★★</p>
+              <p>
+                レスポンシブデザイン対応。SCSSやBootstrapを駆使し効率的に行います。
+              </p>
+            </li>
+
+            <li class="skill">
+              <img src="./image/javascript.png" alt="JavaScript" />
+              <h2>JavaScript</h2>
+              <p>Level: ★★★★☆</p>
+              <p>
+                ネイティブJSだけでなくjQueryなどのライブラリを活用したコーディングにも対応可能です。
+              </p>
+            </li>
+
+            <li class="skill">
+              <img src="./image/wordpress.png" alt="Wordpress" />
+              <h2>WordPress</h2>
+              <p>Level: ★★★★☆</p>
+              <p>
+                環境構築、テーマ作成、既存サイトの移行など幅広く対応いたします。
+              </p>
+            </li>
+
+            <li class="skill">
+              <img src="./image/XD.png" alt="HTML" />
+              <h2>Adobe XD</h2>
+              <p>Level: ★★★★☆</p>
+              <p>
+                簡易的なワイヤーフレームやデザインカンプ、そしてレスポンシブなプロトタイプ作成も可能です。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- サービス紹介 -->
+    <div class="service_section">
+      <div class="portfolio_title">
+        <span
+          class="glyphicon glyphicon-globe"
+          style="letter-spacing: 5px"
+        ></span>
+        <p>Service</p>
+      </div>
+
+      <div class="introduction_text animated fadein">
+        <ul>
+          <li class="service_item">
+            <img src="image/coding.png" alt="coding" />
+            <h2>コーディング</h2>
+            <p>
+              LPやコーポレートサイト等、目的やデザインの意図を汲み取り適切なコーディングを行います。また、軽微なコードの修正などにも対応しております。
+            </p>
+          </li>
+
+          <li class="service_item">
+            <img src="./image/design.png" alt="web design" />
+            <h2>Webデザイン</h2>
+            <p>
+              ヒアリングにより「誰に何を伝えるか」を明確化し、ご要望に沿ったデザイン作成いたします。分かりやすさと親しみやすさを重視し設計いたします。
+            </p>
+          </li>
+
+          <li class="service_item">
+            <img src="./image/wordpress.png" alt="wordpress" />
+            <h2>Wordpress</h2>
+            <p>
+              コーポレートサイトやブログ等のWordPressサイトの構築、既存サイトのWordPress化、コードの修正や既存テーマのカスタマイズに対応しております。
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--実績-->
+    <div class="portfolio_section">
+      <div class="portfolio_title">
+        <span
+          class="glyphicon glyphicon-list-alt"
+          style="letter-spacing: 5px"
+        ></span>
+        <p>Works</p>
+      </div>
+
+      <div class="introduction_text animated fadein">
+        <ul>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="portfolio">
+                <img
+                  src="./image/junkih_portfolio.jpg"
+                  alt="Junki Hagiwara's Portfolio"
+                />
+              </div>
+              <div class="hover_text">
+                <p class="text1">Junki Hagiwara's Portfolio</p>
+                <p class="text2">
+                  私自身をご紹介するオリジナルサイト。モノトーンで配色し見やすさを重視いたしました。
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://hayabusakensetsu.site"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="portfolio">
+                <img
+                  src="./image/hayabusakensetsu.jpg"
+                  alt="hayabusakensetsu"
+                />
+              </div>
+              <div class="hover_text">
+                <p class="text1">はやぶさ建設合同会社</p>
+                <p class="text2">
+                  <br />地域密着型を想定した架空企業サイト。記事スライダーや問い合わせフォームを実装し使いやすさを向上。
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://junkihagiwara.github.io/agri_future/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover"
+            >
+              <div class="portfolio">
+                <img src="./image/agri_future.jpg" alt="Agri Future" />
+              </div>
+              <div class="hover_text">
+                <p class="text1">Agri Future</p>
+                <p class="text2">
+                  <br />架空のアグリテック企業サイト。Adobe
+                  XDでゼロからデザイン作成。下層ページは後日作成予定。
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="portfolio_title">
+        <span
+          class="glyphicon glyphicon-envelope"
+          style="letter-spacing: 5px"
+        ></span>
+        <p>Contact</p>
+      </div>
+      <p class="contact_text">
+        ご依頼やご相談は【E-mail か TwitterのDM】よりお願いいたします
+      </p>
+      <!--SNSアイコン-->
+      <ul class="follow-me">
+        <li>
+          <a
+            href="mailto:junki.hagiwara@bebasgate.com?body=ご依頼/ご相談内容"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="gmail"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/junkinsu_shacho"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="twitter"
+          ></a>
+        </li>
+      </ul>
+      <!--コピーライト-->
+      <div id="copyright">
+        Copyright &copy; 2021 BEBASGATE All Rights Reserved.
+      </div>
+    </footer>
+    <script src="vendor/jquery-2.2.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/jquery.waypoints.min.js"></script>
+    <script src="vendor/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/mobile-detect.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </body>
+</html>
